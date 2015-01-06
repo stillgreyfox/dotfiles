@@ -169,13 +169,14 @@ PS1="\[\033[0;34m\][\u@\h:\w]$\[\033[0m\]"
 ## -----------------------
 
 # 2.1) Safety
-alias rm="rm -i"
-alias mv="mv -i"
-alias cp="cp -i"
-set -o noclobber
+#alias rm="rm -i"
+#alias mv="mv -i"
+#alias cp="cp -i"
+#set -o noclobber
 
 # 2.2) Listing, directories, and motion
-alias ll="ls -alrtF --color"
+alias ll="ls -halF --color"
+alias lt="ls -halrtF --color"
 alias la="ls -A"
 alias l="ls -CF"
 alias dir='ls --color=auto --format=vertical'
@@ -224,4 +225,35 @@ fi
 ## ------------------------------
 
 ## Define any user-specific variables you want here.
+
+#alias cgrep="find . -name '*.[ch]' -print0 -or \
+#                    -name '*.[ch]pp' -print0 -or \
+#                    -name '*.[ch]xx' -print0 -or \
+#                    -name '*.cc' -print0 \
+#                    | xargs -0 grep -n --color=always"
+
+# optimized version, uses 16 parallel instances of grep,
+# giving each 50 files to search
+#alias cgrep="find . -name '*.[ch]' -print0 -or \
+#                    -name '*.[ch]pp' -print0 -or \
+#                    -name '*.[ch]xx' -print0 -or \
+#                    -name '*.cc' -print0 \
+#                    | xargs -0 -n8 -P16  grep -n --color=always"
+#                    #| xargs -0 grep -n --color=always"
+#alias pygrep="find . -name '*.php' -print0 -or \
+#                     -name '*.pcgi' -print0 \
+#                     | xargs -0 -n8 -P16 grep -n --color=always"
+#alias jsgrep="find . -name '*.js' -print0 \
+#                     | xargs -0 grep -n --color=always"
+#alias htgrep="find . -name '*.html' -print0 -or \
+#                     -name '*.htm' -print0 \
+#                     -name '*.xhtml' -print0 \
+#                     -name '*.css' -print0 \
+#                     | xargs -0 -n8 -P16 grep -n --color=always"
+alias less='less -R'
+alias psg='ps aux | head -1; ps aux | grep -v grep | grep'  
+
+#alias ll='ls -halF'
+
+TZ='America/New_York'; export TZ
 source ~/.bashrc_custom
