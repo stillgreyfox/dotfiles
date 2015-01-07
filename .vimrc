@@ -1,7 +1,7 @@
 " Pathogen load
 filetype off
 
-call pathogen#inflect()
+call pathogen#infect()
 call pathogen#helptags()
 
 filetype plugin indent on
