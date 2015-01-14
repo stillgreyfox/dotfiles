@@ -149,6 +149,15 @@ alias Sl='ls'
 alias sL='ls'
 alias SL='ls'
 
+alias ng='ssh ngmaster'
+alias NG='ng'
+alias Ng='ng'
+alias nG='ng'
+
+alias bt='ssh btmaster'
+alias BT='bt'
+alias Bt='bt'
+alias bT='bt'
 
 alias ll='ls -halF --color'
 
