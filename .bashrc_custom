@@ -149,6 +149,11 @@ alias Sl='ls'
 alias sL='ls'
 alias SL='ls'
 
+alias lb='ssh lb'
+alias LB='lb'
+alias Lb='lb'
+alias lB='lb'
+
 alias ng='ssh ngmaster'
 alias NG='ng'
 alias Ng='ng'
