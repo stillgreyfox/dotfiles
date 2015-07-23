@@ -154,6 +154,8 @@ alias LB='lb'
 alias Lb='lb'
 alias lB='lb'
 
+alias cti='ssh cti'
+
 alias llb='ssh tgambone@localhost -p'
 
 alias ng='ssh ngmaster'
@@ -166,7 +168,12 @@ alias BT='bt'
 alias Bt='bt'
 alias bT='bt'
 
+alias dr='cd ~/dr/unitColor'
+
 alias ll='ls -halF --color'
+
+alias ac='. venv/bin/activate'
+alias de='deactivate'
 
 TZ='America/New_York'; export TZ
 
@@ -221,3 +228,7 @@ github-create() {
 }
 
 alias dr='cd ~/dr/unitColor'
+
+# LD_LIBRARY_PATH for HEEKSCAD / HEEKSCNC
+LD_LIBRARY_PATH=/usr/local/lib
+export LD_LIBRARY_PATH
