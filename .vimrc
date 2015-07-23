@@ -7,6 +7,7 @@
 "filetype plugin indent on
 syntax on 
 
+set pastetoggle=<F2>
 set cursorline et
 " for C-like
 set ts=2 sw=2
