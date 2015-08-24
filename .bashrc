@@ -135,7 +135,7 @@ if [ "$PS1" ]; then
     # 6) the last command you executed
     #
     # The only minor bug: if you include a literal newline or tab (e.g. with
-    # awk -F"\t"), then that will be included verbatime. It is possible to
+    # awk -F"\t"), then that will be included verbatim. It is possible to
     # define a bash function which escapes the string before writing it; if you
     # have a fix for that which doesn't slow the command down, please submit
     # a patch or pull request.
@@ -162,7 +162,7 @@ shopt -s histappend
 
 # Make prompt informative
 # See:  http://www.ukuug.org/events/linux2003/papers/bash_tips/
-PS1="\[\033[0;34m\][\u@\h:\w]$\[\033[0m\]"
+#PS1="\[\033[0;34m\][\u@\h:\w]$\[\033[0m\]"
 
 ## -----------------------
 ## -- 2) Set up aliases --
@@ -186,7 +186,7 @@ alias ..='cd ..'
 alias ...='cd ..;cd ..'
 alias md='mkdir'
 alias cl='clear'
-alias du='du -ch --max-depth=1'
+alias du='du -ch'
 alias treeacl='tree -A -C -L 2'
 
 # 2.3) Text and editor commands

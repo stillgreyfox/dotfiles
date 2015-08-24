@@ -55,6 +55,13 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
+    #PS1='${debian_chroot:+($debian_chroot)}
+    #                                      \[\033[01;32m\]
+    #                                      \u@\h
+    #                                      \[\033[00m\]:
+    #                                      \[\033[01;34m\]
+    #                                      \w
+    #                                      \[\033[00m\]\$ '
     PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
@@ -168,8 +175,9 @@ alias BT='bt'
 alias Bt='bt'
 alias bT='bt'
 
-alias dr='cd ~/dr/unitColor'
+#alias dr='cd ~/dr/unitColor'
 #alias dr='cd ~/dr/pyohio'
+alias dr='cd ~/dr/odroid_c1_gentoo'
 
 alias ll='ls -halF --color'
 
@@ -231,3 +239,7 @@ github-create() {
 # LD_LIBRARY_PATH for HEEKSCAD / HEEKSCNC
 LD_LIBRARY_PATH=/usr/local/lib
 export LD_LIBRARY_PATH
+export PATH=/opt/toolchains/gcc-linaro-arm-none-eabi-4.8-2014.04_linux/bin:$PATH
+ARCH=arm
+CROSS_COMPILE=arm-linux-gnueabihf-
+export PATH=/opt/toolchains/gcc-linaro-arm-linux-gnueabihf-4.9-2014.09_linux/bin:$PATH

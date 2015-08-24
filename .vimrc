@@ -1,10 +1,15 @@
 " Pathogen load
-filetype off
+"filetype off
 
-call pathogen#infect()
-call pathogen#helptags()
+"call pathogen#infect()
+"call pathogen#helptags()
 
-filetype plugin indent on
+"filetype plugin indent on
 syntax on 
 
-set cursorline
+set pastetoggle=<F2>
+set cursorline et
+" for C-like
+set ts=2 sw=2
+" for python
+"set et ts=4 sw=4
