@@ -124,8 +124,8 @@ alias cgrep="find . -name '*.[ch]' -print0 -or \
                     -name '*.cc' -print0 \
                     | xargs -0 grep -n --color=always"
                     #| xargs -0 -n8 -P16  grep -n --color=always"
-alias pygrep="find . -name '*.php' -print0 -or \
-                     -name '*.pcgi' -print0 \
+alias pygrep="find . -name '*.py' -print0 -or \
+                     -name '*.pyc' -print0 \
                      | xargs -0 grep -n --color=always"
                      #| xargs -0 -n8 -P16 grep -n --color=always"
 alias jsgrep="find . -name '*.js' -print0 \
@@ -169,6 +169,7 @@ alias Bt='bt'
 alias bT='bt'
 
 alias dr='cd ~/dr/unitColor'
+#alias dr='cd ~/dr/pyohio'
 
 alias ll='ls -halF --color'
 
