@@ -173,9 +173,7 @@ alias BT='bt'
 alias Bt='bt'
 alias bT='bt'
 
-#alias dr='cd ~/dr/unitColor'
-#alias dr='cd ~/dr/pyohio'
-alias dr='cd ~/dr/odroid_c1_gentoo'
+alias dr='cd ~/dr/'
 
 alias ll='ls -halF --color'
 
