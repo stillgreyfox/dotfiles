@@ -3,7 +3,13 @@ runtime bundle/vim-pathogen/autoload/pathogen.vim
 " Pathogen load
 filetype off
 
-"let g:pathogen_disabled = ['pythonmode', 'pytest']
+"let g:pathogen_disabled = ['nerdtree']
+"let g:pathogen_disabled = ['minibufexpl']
+"let g:pathogen_disabled = ['commandt']
+"let g:pathogen_disabled = ['gundo']
+"let g:pathogen_disabled = ['ack']
+"let g:pathogen_disabled = ['pytest']
+"let g:pathogen_disabled = ['pythonmode']
 
 call pathogen#infect()
 call pathogen#helptags()
