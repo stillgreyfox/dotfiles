@@ -107,3 +107,41 @@ map <leader>g :GundoToggle<CR>
 " Ack is an easy way to look for a pattern through a project. It can be seen
 " as a VIM embedded version of Grep. Where:grep, :grepadd, :lgrep, and
 " :lgrepadd, are replaced by :Ack, :AckAdd, :LAck, and :LAckAdd.
+
+"
+" Python-mode
+"
+" python-mode is a plugin providing all the features needed to code in python.
+" At first, I installed it because I couldn’t find a good auto-completion
+" plugin for python, but slowly I noticed that it could replace all others
+" plugins I was using to code in python.
+"
+" With python-mode, VIM is now able to:
+"
+" Show your syntax errors and unused imports: Every time the code is saved,
+" pylint is called and check syntax errors and unused imports. It is also
+" possible to run others linter like pyflake. By pressing Ctrl+c+ro, rope
+" automatically organizes imports.
+"
+" Complete automatically your code: Press Ctrl+Space to display completions.
+" Thanks to rope-vim, python-mode can browse in the project and is able to
+" display any functions and attributes of any external classes. It is the most
+" accurate python auto-completion I have seen so far. \b set a breakpoint.
+"
+" Refactor your code: Pressing Ctrl+c+rr refactors any class, function or
+" method. The changes affects all files of your project.
+"
+" Quickly display the Pydoc: Pressing K when the cursor is on a word displays
+" its python documentation.
+"
+" Run your script without leaving VIM: Press \r to launch scripts on a split
+" window.
+"
+" Navigate quickly through your code: Python-mode includes many commands to
+" navigate through python source code, for instance, by pressing ]] the cursor
+" jump to the next function or method. See the documention of rope-vim for the
+" complete motions list. Press Ctrl+c+g to jump to the definition of any class
+" or function.
+"
+" And of course, plenty other amazing stuffs that can be discovered by reading
+" the documentation of this plugin.
