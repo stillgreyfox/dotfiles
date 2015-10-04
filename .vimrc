@@ -3,7 +3,13 @@ runtime bundle/vim-pathogen/autoload/pathogen.vim
 " Pathogen load
 filetype off
 
-"let g:pathogen_disabled = ['pythonmode', 'pytest']
+"let g:pathogen_disabled = ['nerdtree']
+"let g:pathogen_disabled = ['minibufexpl']
+"let g:pathogen_disabled = ['commandt']
+"let g:pathogen_disabled = ['gundo']
+"let g:pathogen_disabled = ['ack']
+"let g:pathogen_disabled = ['pytest']
+"let g:pathogen_disabled = ['pythonmode']
 
 call pathogen#infect()
 call pathogen#helptags()
@@ -12,7 +18,7 @@ call pathogen#helptags()
 " http://www.mathieusavy.com/year/05/21/setting-up-vim-for-python-and-django
 
 syntax on "Enable the syntax coloration
-set pastetoggle=<F2> "Toggle PASTE mode with F2 key
+set pastetoggle=<F3> "Toggle PASTE mode with F3 key
 set cursorline "Highlight current line
 " for C-like
 "set ts=2 sw=2
@@ -34,9 +40,9 @@ filetype plugin indent on " must have both plugin and indent on for python-mode
 "set foldmethod=indent
 "set foldlevel=99
 "set smartindent
-"set tabstop=4
-"set shiftwidth=4
-"set expandtab
+set tabstop=4
+set shiftwidth=4
+set expandtab
 "
 ""Moving from one window to another with Ctrl + mov
 map <c-j> <c-w>j
@@ -101,3 +107,84 @@ map <leader>g :GundoToggle<CR>
 " Ack is an easy way to look for a pattern through a project. It can be seen
 " as a VIM embedded version of Grep. Where:grep, :grepadd, :lgrep, and
 " :lgrepadd, are replaced by :Ack, :AckAdd, :LAck, and :LAckAdd.
+
+" Python-mode
+"
+" python-mode is a plugin providing all the features needed to code in python.
+" At first, I installed it because I couldn’t find a good auto-completion
+" plugin for python, but slowly I noticed that it could replace all others
+" plugins I was using to code in python.
+"
+" With python-mode, VIM is now able to:
+"
+" Show your syntax errors and unused imports: Every time the code is saved,
+" pylint is called and check syntax errors and unused imports. It is also
+" possible to run others linter like pyflake. By pressing Ctrl+c+ro, rope
+" automatically organizes imports.
+"
+" Complete automatically your code: Press Ctrl+Space to display completions.
+" Thanks to rope-vim, python-mode can browse in the project and is able to
+" display any functions and attributes of any external classes. It is the most
+" accurate python auto-completion I have seen so far. \b set a breakpoint.
+"
+" Refactor your code: Pressing Ctrl+c+rr refactors any class, function or
+" method. The changes affects all files of your project.
+"
+" Quickly display the Pydoc: Pressing K when the cursor is on a word displays
+" its python documentation.
+"
+" Run your script without leaving VIM: Press \r to launch scripts on a split
+" window.
+"
+" Navigate quickly through your code: Python-mode includes many commands to
+" navigate through python source code, for instance, by pressing ]] the cursor
+" jump to the next function or method. See the documention of rope-vim for the
+" complete motions list. Press Ctrl+c+g to jump to the definition of any class
+" or function.
+"
+" And of course, plenty other amazing stuffs that can be discovered by reading
+" the documentation of this plugin.
+
+" Python-mode
+" settings from:
+" http://unlogic.co.uk/2013/02/08/vim-as-a-python-ide/
+"
+" Activate rope
+" Keys:
+" K             Show python docs
+" <Ctrl-Space>  Rope autocomplete
+" <Ctrl-c>g     Rope goto definition
+" <Ctrl-c>d     Rope show documentation
+" <Ctrl-c>f     Rope find occurrences
+" <Leader>b     Set, unset breakpoint (g:pymode_breakpoint enabled)
+" [[            Jump on previous class or function (normal, visual, operator modes)
+" ]]            Jump on next class or function (normal, visual, operator modes)
+" [M            Jump on previous class or method (normal, visual, operator modes)
+" ]M            Jump on next class or method (normal, visual, operator modes)
+let g:pymode_rope = 1
+
+" Documentation
+let g:pymode_doc = 1
+let g:pymode_doc_key = 'K'
+
+"Linting
+let g:pymode_lint = 1
+let g:pymode_lint_checker = "pyflakes,pep8"
+" Auto check on save
+let g:pymode_lint_write = 1
+
+" Support virtualenv
+let g:pymode_virtualenv = 1
+
+" Enable breakpoints plugin
+let g:pymode_breakpoint = 1
+let g:pymode_breakpoint_bind = '<leader>b'
+
+" syntax highlighting
+let g:pymode_syntax = 1
+let g:pymode_syntax_all = 1
+let g:pymode_syntax_indent_errors = g:pymode_syntax_all
+let g:pymode_syntax_space_errors = g:pymode_syntax_all
+
+" Don't autofold code
+let g:pymode_folding = 0
