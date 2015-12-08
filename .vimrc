@@ -10,6 +10,8 @@ filetype off
 "let g:pathogen_disabled = ['ack']
 "let g:pathogen_disabled = ['pytest']
 "let g:pathogen_disabled = ['pythonmode']
+"let g:pathogen_disabled = ['vim-markdown']
+"let g:pathogen_disabled = ['vim-pencil']
 
 call pathogen#infect()
 call pathogen#helptags()
@@ -188,3 +190,89 @@ let g:pymode_syntax_space_errors = g:pymode_syntax_all
 
 " Don't autofold code
 let g:pymode_folding = 0
+
+
+"
+" vim-markdown
+"
+
+" ## Options
+
+" ### Enable / Disable Folding
+" Disable the vim-markdown specific folding configuration:
+let g:vim_markdown_folding_disabled = 1
+
+" To enable/disable folding use Vim's standard folding configuration.
+"set foldenable
+"set [no]foldenable
+
+" ### Disable Default Key Mappings
+" Disable default key mappings:
+"let g:vim_markdown_no_default_key_mappings = 1
+
+" You can also map them by yourself with `<Plug>` mappings.
+
+" ### Syntax extensions
+" The following options control which syntax extensions will be turned on.
+" They are off by default.
+
+" #### LaTeX math
+" Used as `$x^2$`, `$$x^2$$`, escapable as `\$x\$` and `\$\$x\$\$`.
+"let g:vim_markdown_math = 1
+
+" #### YAML frontmatter
+" Highlight YAML frontmatter as used by Jekyll:
+"let g:vim_markdown_frontmatter = 1
+
+" ## Mappings
+" The following work on normal and visual modes:
+" -   `gx`: open the link under the cursor in the same browser as the standard `gx` command. `<Plug>Markdown_OpenUrlUnderCursor`
+"      The standard `gx` is extended by allowing you to put your cursor anywhere inside a link.
+"      For example, all the following cursor positions will work:
+"   
+"          [Example](http://example.com)
+"          ^  ^    ^^   ^       ^
+"          1  2    34   5       6
+"   
+"          <http://example.com>
+"          ^  ^               ^
+"          1  2               3
+"
+"    Known limitation: does not work for links that span multiple lines.
+" -   `]]`: go to next header. `<Plug>Markdown_MoveToNextHeader`
+" -   `[[`: go to previous header. Contrast with `]c`. `<Plug>Markdown_MoveToPreviousHeader`
+" -   `][`: go to next sibling header if any. `<Plug>Markdown_MoveToNextSiblingHeader`
+" -   `[]`: go to previous sibling header if any. `<Plug>Markdown_MoveToPreviousSiblingHeader`
+" -   `]c`: go to Current header. `<Plug>Markdown_MoveToCurHeader`
+" -   `]u`: go to parent header (Up). `<Plug>Markdown_MoveToParentHeader`
+
+" This plugin follows the recommended Vim plugin mapping interface, so to change the map `]u` to `asdf`, add to your `.vimrc`:
+"    map asdf <Plug>Markdown_MoveToParentHeader
+
+" To disable a map use:
+"    map <Plug> <Plug>Markdown_MoveToParentHeader
+
+" ## Commands
+" -   `:HeaderDecrease`:
+"      Decrease level of all headers in buffer: `h2` to `h1`, `h3` to `h2`, etc.
+"      If range is given, only operate in the range.
+"      If an `h1` would be decreased, abort.
+"      For simplicity of implementation, Setex headers are converted to Atx.
+
+" -   `:HeaderIncrease`: Analogous to `:HeaderDecrease`, but increase levels instead.
+
+" -   `:SetexToAtx`:
+"      Convert all Setex style headers in buffer to Atx.
+"      If a range is given, e.g. hit `:` from visual mode, only operate on the range.
+
+" -   `:TableFormat`: Format the table under the cursor [like this](http://www.cirosantilli.com/markdown-styleguide/#tables).
+"      Requires [Tabular](https://github.com/godlygeek/tabular).
+"      The input table *must* already have a separator line as the second line of the table.
+"      That line only needs to contain the correct pipes `|`, nothing else is required.
+
+" -   `:Toc`: create a quickfix vertical window navigable table of contents with the headers.
+"      Hit `<Enter>` on a line to jump to the corresponding line of the markdown file.
+
+" -   `:Toch`: Same as `:Toc` but in an horizontal window.
+" -   `:Toct`: Same as `:Toc` but in a new tab.
+" -   `:Tocv`: Same as `:Toc` for symmetry with `:Toch` and `Tocv`.

@@ -15,3 +15,14 @@ ln -sb dotfiles/.bashrc_custom ..
 ln -sb dotfiles/.vimrc ..
 ln -sf dotfiles/.emacs.d ..
 ln -sf dotfiles/.vim ..
+
+# This pulls down the latest copies of the embedded submodule repos
+git submodule init && git submodule update && git submodule status
+
+# If you want to add a new submodule, do the following:
+#   cd <dir to clone module into>
+#   git submodule add <repo URL>
+
+# More concretely: 
+#   cd .vim/bundle
+#   git submodule add https://github.com/plasticboy/vim-markdown.git
