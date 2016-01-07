@@ -160,6 +160,7 @@ alias Lb='lb'
 alias lB='lb'
 
 alias cti='ssh cti'
+alias cwrdp='rdesktop -g 1280x1024 -d CTI -u tgambone -p - localhost:19089'
 
 alias llb='ssh tgambone@localhost -p'
 
