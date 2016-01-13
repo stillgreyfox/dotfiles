@@ -160,9 +160,12 @@ alias Lb='lb'
 alias lB='lb'
 
 alias cti='ssh cti'
+alias fwcti='~/dr/bitbucket/cti_tunnelling_scripts/lb_fw.sh'
+alias uisg='~/dr/local/ttocui_gtk/uisgterm/uisgterm_gtk'
 alias cwrdp='rdesktop -g 1280x1024 -d CTI -u tgambone -p - localhost:19089'
 
-alias llb='ssh tgambone@localhost -p'
+alias llb='ssh tgambone@llb -p 18095'
+alias jol='ssh root@localhost -p 16090'
 
 alias ng='ssh ngmaster'
 alias NG='ng'
