@@ -15,6 +15,9 @@ ln -sb dotfiles/.bashrc_custom ..
 ln -sb dotfiles/.vimrc ..
 ln -sf dotfiles/.emacs.d ..
 ln -sf dotfiles/.vim ..
+if [ -d "../.local/share/nemo/actions" ]; then
+    ln -sf ~/dotfiles/.vim.nemo_action ../.local/share/nemo/actions/
+fi
 
 # This pulls down the latest copies of the embedded submodule repos
 git submodule init && git submodule update && git submodule status

@@ -1,0 +1,9 @@
+[Nemo Action]
+Active=true
+Name=Open with Vim
+Comment=Open %N with Vim in a terminal
+Exec=gnome-terminal --geometry=80x49 --working-directory=%P -e "vim %F"
+Icon-Name=vim
+Selection=s
+Extensions=nodirs;
+Dependencies=vim;
