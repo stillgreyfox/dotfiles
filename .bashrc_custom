@@ -167,6 +167,11 @@ alias cwrdp='rdesktop -g 1280x1024 -d CTI -u tgambone -p - localhost:19089'
 alias llb='ssh tgambone@llb -p 18095'
 alias jol='ssh root@localhost -p 16090'
 
+alias uc='ssh ucmaster'
+alias UC='uc'
+alias Uc='uc'
+alias uC='uc'
+
 alias ng='ssh ngmaster'
 alias NG='ng'
 alias Ng='ng'
@@ -181,6 +186,7 @@ alias dr='cd ~/dr/'
 
 alias ll='ls -halF --color'
 
+#alias ac='if [ -d "flask" ]; then . flask/bin/activate; else . venv/bin/activate; fi'
 alias ac='. venv/bin/activate 2> /dev/null || . flask/bin/activate'
 alias de='deactivate'
 
