@@ -181,7 +181,8 @@ alias dr='cd ~/dr/'
 
 alias ll='ls -halF --color'
 
-alias ac='. venv/bin/activate'
+#alias ac='if [ -d "flask" ]; then . flask/bin/activate; else . venv/bin/activate; fi'
+alias ac='. venv/bin/activate 2> /dev/null || . flask/bin/activate'
 alias de='deactivate'
 
 TZ='America/New_York'; export TZ
