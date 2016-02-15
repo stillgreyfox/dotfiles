@@ -19,13 +19,14 @@ if [ -d "../.local/share/nemo/actions" ]; then
     ln -sf ~/dotfiles/.vim.nemo_action ../.local/share/nemo/actions/
 fi
 
-# This pulls down the old copies of the embedded submodule repos
+# This should pull down the latest remote HEAD of the embedded submodule repos
 # (how old depends on when submodule changes were last committed to this repo)
-git submodule init && git submodule update && git submodule status
+git submodule init && git submodule update --remote && git submodule status
 
-# This line will actually update the submodules
+# If the above doesn't pull with the update --remote,
+# then this line will actually update the submodules
 # (will leave to user to commit versions to dotfiles)
-git submodule foreach git pull origin master
+#git submodule foreach git pull origin master
 
 # If you want to add a new submodule, do the following:
 #   cd <dir to clone module into>
