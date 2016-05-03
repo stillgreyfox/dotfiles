@@ -1,0 +1,3 @@
+svn diff $* > /tmp/$$                                                                                                                                        
+vi /tmp/$$ +0
+rm -f /tmp/$$
