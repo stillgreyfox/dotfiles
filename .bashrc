@@ -198,8 +198,9 @@ export VISUAL='vim'
 export EDITOR="$VISUAL"
 
 # 2.4) grep options
-export GREP_OPTIONS='--color=auto'
-export GREP_COLOR='1;31' # green for matches
+#export GREP_OPTIONS='--color=auto'
+#export GREP_COLOR='1;31' # green for matches
+alias grep='grep --color=auto'
 
 # 2.5) sort options
 # Ensures cross-platform sorting behavior of GNU sort.
