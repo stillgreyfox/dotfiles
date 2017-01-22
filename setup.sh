@@ -16,7 +16,7 @@ ln -sb dotfiles/.vimrc ..
 ln -sf dotfiles/.emacs.d ..
 ln -sf dotfiles/.vim ..
 ln -sf dotfiles/.ctags ..
-sudo cp dotfiles/.svndiff /usr/local/bin/svndiff
+sudo cp .svndiff /usr/local/bin/svndiff
 sudo chmod +x /usr/local/bin/svndiff
 if [ -d "../.local/share/nemo/actions" ]; then
     ln -sf ~/dotfiles/.vim.nemo_action ../.local/share/nemo/actions/
