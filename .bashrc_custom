@@ -183,6 +183,11 @@ alias Bt='bt'
 alias bT='bt'
 
 alias dr='cd ~/dr/'
+alias gh='cd ~/dr/github'
+alias bb='cd ~/dr/bitbucket'
+alias lo='cd ~/dr/local'
+alias dl='cd ~/Downloads'
+alias w='cd $WORK'
 
 alias ll='ls -halF --color'
 
@@ -249,3 +254,6 @@ export PATH=/opt/toolchains/gcc-linaro-arm-none-eabi-4.8-2014.04_linux/bin:$PATH
 ARCH=arm
 CROSS_COMPILE=arm-linux-gnueabihf-
 export PATH=/opt/toolchains/gcc-linaro-arm-linux-gnueabihf-4.9-2014.09_linux/bin:$PATH
+
+# ROS environment setup
+. /opt/ros/kinetic/setup.bash
