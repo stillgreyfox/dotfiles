@@ -158,9 +158,10 @@ alias BT='bt'
 alias Bt='bt'
 alias bT='bt'
 
-#alias dr='cd ~/dr/unitColor'
-#alias dr='cd ~/dr/pyohio'
-alias dr='cd ~/dr/odroid_c1_gentoo'
+alias dr='cd ~/dr/'
+alias lo='cd ~/dr/local'
+alias gh='cd ~/dr/github'
+alias bb='cd ~/dr/bitbucket'
 
 alias ll='ls -halF --color'
 alias la='ls -A'
