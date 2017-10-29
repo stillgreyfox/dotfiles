@@ -223,8 +223,3 @@ github-create() {
 
 # LD_LIBRARY_PATH for HEEKSCAD / HEEKSCNC
 LD_LIBRARY_PATH=/usr/local/lib
-export LD_LIBRARY_PATH
-export PATH=/opt/toolchains/gcc-linaro-arm-none-eabi-4.8-2014.04_linux/bin:$PATH
-ARCH=arm
-CROSS_COMPILE=arm-linux-gnueabihf-
-export PATH=/opt/toolchains/gcc-linaro-arm-linux-gnueabihf-4.9-2014.09_linux/bin:$PATH
