@@ -9,12 +9,13 @@ ln -sb dotfiles/.bash_profile ..
 ln -sb dotfiles/.bashrc ..
 ln -sb dotfiles/.bashrc_custom ..
 ln -sb dotfiles/.vimrc ..
-cp -a dotfiles/.vim ..
-# symlinks above are just copies, but for the .vim/ dir, need a recursive copy
 
 # This should pull down the latest remote HEAD of the embedded submodule repos
 # (how old depends on when submodule changes were last committed to this repo)
 git submodule init && git submodule update --remote && git submodule status
+
+cp -a dotfiles/.vim $HOME
+# symlinks above are just copies, but for the .vim/ dir, need a recursive copy
 
 # If the above doesn't pull with the update --remote,
 # then this line will actually update the submodules
