@@ -14,7 +14,7 @@ ln -sb dotfiles/.vimrc ..
 # (how old depends on when submodule changes were last committed to this repo)
 git submodule init && git submodule update --remote && git submodule status
 
-cp -a dotfiles/.vim $HOME
+cp -a $HOME/dotfiles/.vim $HOME
 # symlinks above are just copies, but for the .vim/ dir, need a recursive copy
 
 # If the above doesn't pull with the update --remote,
